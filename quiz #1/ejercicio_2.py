@@ -118,6 +118,13 @@ while run=='yes':
     new_watch['temporada']= season
     new_watch['capitulo']=x
     history[watch_number]=new_watch
+    print('CAPITULO SELECCIONADO \n')
+    for key, value in new_watch.items():
+        if key=='capitulo':
+          for info,data in value.items():
+            print('{}: {}'.format(info.title(),data))
+        else:
+          print('{}: {}'.format(key.title(),value))
   if option==2:
     print('***** HISTORIAL DE REPRODUCCION *****')
     for i in history.keys():
