@@ -108,7 +108,7 @@ while run=='yes':
         for info, data in x.items():
           print('{}: {}'.format(info.capitalize(),data))
         print('\n')
-    cap_selected=input('Por favor introduzca el numero de capitulo que desea ver: \n >>> ')
+    cap_selected=int(input('Por favor introduzca el numero de capitulo que desea ver: \n >>> '))
     for x in anime[select_show][season]:
         for info, data in x.items():
           if info=='cap':
@@ -116,7 +116,7 @@ while run=='yes':
               cap_key=x
     new_watch['show']=select_show
     new_watch['temporada']= season
-    new_watch['capitulo']=x
+    new_watch['capitulo']=cap_key
     history[watch_number]=new_watch
     print('CAPITULO SELECCIONADO \n')
     for key, value in new_watch.items():
